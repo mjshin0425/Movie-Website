@@ -37,6 +37,9 @@ function Hello() {
 
 // Cleanup : 컴포넌트가 사라질 때 감지
 function App() {
+  useEffect(() => {
+    console.log("created :");
+  }, []);
   const [showing, setShowing] = useState(false);
   const onClick = () => setShowing((prev) => !prev);
   return (
